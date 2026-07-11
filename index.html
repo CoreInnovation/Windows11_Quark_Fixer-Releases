@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quark Fixer: one hotkey un-breaks Windows after a remote session</title>
+<meta name="description" content="Dead taskbar after RDP? Windows lost off screen? Wrong scaling? Quark Fixer repairs all of it with one hotkey, or automatically the moment you come back to your PC.">
+<style>
+  :root {
+    --bg: #0b0f14; --panel: #0e141b; --line: #1b2733;
+    --text: #e6eef7; --muted: #8fa3b8; --accent: #34d399; --accent-dark: #0b7a55;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.6; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 72px 0 40px; text-align: center; }
+  .logo { font-size: 44px; }
+  h1 { font-size: 34px; margin-top: 12px; letter-spacing: -0.5px; }
+  h1 .brand { color: var(--accent); }
+  .tag { color: var(--muted); font-size: 18px; margin-top: 12px; }
+  .cta { display: inline-block; margin-top: 28px; background: var(--accent-dark); border: 1px solid var(--accent);
+         color: #fff; font-weight: 600; font-size: 18px; padding: 14px 34px; border-radius: 12px; text-decoration: none; }
+  .cta:hover { filter: brightness(1.15); }
+  .cta-sub { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .pain { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin: 36px 0; }
+  .pain p { color: #c7d3e0; }
+  .pain .grr { color: var(--muted); font-style: italic; margin-top: 8px; }
+  h2 { font-size: 22px; margin: 44px 0 14px; color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .card b { display: block; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 14px; }
+  .keys { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+  .kbd { background: #12241c; border: 1px solid var(--accent); border-radius: 8px; padding: 8px 14px;
+         font-weight: 600; color: var(--accent); }
+  ul.plain { list-style: none; }
+  ul.plain li { padding: 6px 0 6px 28px; position: relative; color: #c7d3e0; }
+  ul.plain li::before { content: "✓"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+  .price { text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+           padding: 30px; margin: 40px 0; }
+  .price .big { font-size: 34px; font-weight: 700; color: var(--accent); }
+  .price p { color: var(--muted); }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 26px 0 44px; color: var(--muted);
+           font-size: 13px; text-align: center; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">🩹🔧</div>
+    <h1><span class="brand">Quark Fixer</span></h1>
+    <p class="tag">One hotkey un-breaks Windows after a remote session.</p>
+    <a class="cta" href="https://github.com/CoreInnovation/Windows11_Quark_Fixer-Releases/releases/latest/download/QuarkFixer.exe">⬇ Download for Windows</a>
+    <div class="cta-sub">Free 14-day trial, everything unlocked · installs in about a second, no admin needed</div>
+  </header>
+
+  <div class="pain">
+    <p><b>You know the drill.</b> You remote into your PC from your phone or laptop, come back, log in
+    at the real keyboard, and Windows is haunted: the taskbar ignores your clicks, the Start menu is
+    dead, apps "maximize" onto a monitor that doesn't exist, and everything looks the wrong size.</p>
+    <p class="grr">So you restart Explorer by hand. Again. For the hundredth time.</p>
+  </div>
+
+  <h2>Press one key. Everything comes back.</h2>
+  <div class="keys">
+    <span class="kbd">Ctrl + Alt + R</span> <span style="color:var(--muted);align-self:center">fixes everything in one pass</span>
+    <span class="kbd">Ctrl + Alt + Shift + R</span> <span style="color:var(--muted);align-self:center">opens the Recovery Panel, fixes a la carte</span>
+  </div>
+  <ul class="plain">
+    <li><b>Revives the taskbar and Start menu</b> gently, without touching your open apps</li>
+    <li><b>Rescues off-screen windows</b> back where you can grab them: windowed, resized, centered (it even fixes where minimized windows will restore to)</li>
+    <li><b>Resets display scaling</b> so Windows rebuilds its resolution and DPI state</li>
+    <li><b>Releases stuck Ctrl / Alt / Shift / Win keys</b> that RDP left "held down"</li>
+    <li><b>Sweeps ghost tray icons</b> left behind by closed apps</li>
+    <li><b>Restarts Explorer politely</b> when you want the thorough cure: it remembers your open folder windows and reopens them</li>
+  </ul>
+
+  <h2>Or don't press anything at all</h2>
+  <div class="grid">
+    <div class="card"><b>🤖 Auto-fix on return</b><p>Quark Fixer notices the moment you come back to the physical PC after a remote session and repairs everything before you can get annoyed. On by default.</p></div>
+    <div class="card"><b>🧊 Safe and boring by design</b><p>Every repair is idempotent: run it on a healthy system and it finds nothing to do. No admin rights, ever. Your apps are never killed.</p></div>
+    <div class="card"><b>🔒 Private</b><p>Nothing about your screen, windows, or files ever leaves your PC. The only network call is an optional anonymous update check.</p></div>
+    <div class="card"><b>🪶 Tiny footprint</b><p>Lives in your system tray. One exe that installs itself to your account in about a second and keeps itself up to date.</p></div>
+  </div>
+
+  <div class="price">
+    <div class="big">$9.99, once.</div>
+    <p>14-day free trial with everything unlocked, then a one-time purchase.<br>
+    No subscription, no account. This version is yours to keep, forever, updates included.</p>
+    <a class="cta" href="https://github.com/CoreInnovation/Windows11_Quark_Fixer-Releases/releases/latest/download/QuarkFixer.exe">⬇ Download Quark Fixer</a>
+  </div>
+
+  <footer>
+    Made with stubborn irritation by <a href="https://coreinnovation.github.io/">Core Innovation Concepts</a>.
+    A trillion-dollar company left the taskbar broken, so we fixed it.
+  </footer>
+
+</div>
+</body>
+</html>
