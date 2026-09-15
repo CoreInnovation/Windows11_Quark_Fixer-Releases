@@ -1,4 +1,4 @@
 # Quark Fixer
 
-Quark Fixer has moved to **[quarkfixer.coreinnovationconcepts.com](https://quarkfixer.coreinnovationconcepts.com/)**, part of
-[Core Innovation Concepts](https://coreinnovationconcepts.com/).
+Quark Fixer has moved to **[quarkfixer.cicapps.com](https://quarkfixer.cicapps.com/)**, part of
+[Core Innovation Concepts](https://cicapps.com/).
